@@ -1,1 +1,1 @@
-web: gunicorn ruther_palanca.wsgi 
+web: gunicorn ruther_palanca.wsgi --log-file -
