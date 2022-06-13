@@ -1,1 +1,1 @@
-web: gunicorn ruther_palanca.wsgi --log-file -
+web: gunicorn palanca-rutherford.wsgi --log-file -
