@@ -1,1 +1,0 @@
-web: gunicorn palanca-rutherford.wsgi --log-file -
