@@ -1,0 +1,42 @@
+{%load static%}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutherford's Palanca</title>
+    <link rel="stylesheet" href="{% static 'palanca/styles.css' %}">
+    <script src="{%static 'palanca/index.js'%}"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Rutherford's Palanca</h1>
+        <p style="text-align:center; ">Batch 2019 - 2020</p>
+        <form action="{%url 'submit'%}" method="post">
+            {% csrf_token %}
+            <div class="section">
+                <div class="recipient_field">   
+                    <label for="">Recipient</label><br>
+                    <select id="select" name="recipient" id="" required>
+                        <option value="" selected="" disabled="">Choose-a-recipient</option>
+                    </select>
+                    <span>{{message}}</span>
+                </div>
+                <div class="codename_field">
+                    <label for="">Codename</label><br>
+                    <input type="text" name="code_name" placeholder="Create-your-own-codename" required>
+                </div>
+            </div>
+            <div class="text_field">
+                <label for="">Write your message</label>
+                <textarea name="message" id="" style="width:100%;" placeholder="Write a message..." required></textarea>
+            </div>
+            <div>
+                <input type="submit" name="" id="" class="submitBtn" value="Submit">
+            </div>
+        </form>
+        <p style="text-align:center;margin-top:30px">There are {{entries}} entries.</p>
+    </div>
+</body>
+</html>
