@@ -103,6 +103,7 @@ label {
 @media only screen and (max-width: 600px) {
     .container{
         margin: auto;
+        display:block;
         width: 65%;
     }
 
